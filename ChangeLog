@@ -1,0 +1,92 @@
+
+ChangeLog, twsapi for Interactive Brokers TWS
+=============================================
+
+
+
+0.6.0 - not yet released  ------------------------------------------------------
+
+Update to IB API 9.69
+  - update to IB API 9.69, see ChangeLog-IB for more details
+  - this release breaks source compatibility to any earlier version
+  - most notable API changes:
+    * attribute tradingClass moves from struct ContractDetails to Contract
+    * conId is used for more requests now for example to get historical data
+
+
+
+0.5.0 - 2013-05-27  ------------------------------------------------------------
+
+Update to IB API 9.68
+
+  - update to IB API 9.68, see ChangeLog-IB for more details
+  - this release breaks source compatibility to any earlier version
+  - remove obsolete libtwsapi.pc, use twsapi.pc instead
+
+
+
+0.4.2 - 2013-03-27  ------------------------------------------------------------
+
+Maintenance release
+
+  - build fixes for BSD
+  - introduce new header twsapi_config.h to have version and configure
+    informations about the twsapi library
+  - allow to initiate handshake and goodbye procedures on user-provided sockets
+
+
+
+0.4.1 - 2012-08-09  ------------------------------------------------------------
+
+Libtool support and minor build fixes
+
+  - minor build chain cleanups regarding compiler warnings and CXXFLAGS
+  - add libtool support and compile with -fPIC
+
+
+
+0.4.0 - 2012-02-19  ------------------------------------------------------------
+
+Update to IB API 9.66, add IPv6 support and minor fixes
+
+  - update to IB API 9.66, see ChangeLog-IB for more details
+  - twsapi 0.4.x will be source compatible to 0.3 series (i.e., code which
+    compiles against twsapi 0.3.x will still work with 0.4.x.)
+  - new build target: make rpm
+  - minor build chain fixes and cleanup
+  - fix, "connection refused" was noticed too late
+  - fix, on win32 we were still using blocking sockets
+  - drop support of systems without getaddrinfo()
+  - eConnect() now tries to connect to all possible IPs of a given hostname
+    before giving up
+  - add IPv6 support, it's still not used per default
+  - add new function eConnect2() to specify the wanted address family
+  - obsolete libtwsapi.pc, use twsapi.pc instead
+
+
+
+0.3.2 - 2011-09-13  ------------------------------------------------------------
+
+Major build and portability fixes.
+
+  - Portability, use getaddrinfo instead of gethostbyname_r and build without
+    hostname resolving if it's missing.
+  - Use gai_strerror for nice resolver error messages.
+  - Experimental mingw support.
+
+
+
+0.3.1 - 2011-08-27  ------------------------------------------------------------
+
+Minor build fixes and update to (non beta) IB API 9.65
+
+  - Minor build fixes for cygwin and other platforms.
+  - Update to IB API 9.65 (0.3.0 was still at 9.65-beta)
+
+
+
+0.3.0 - 2011-08-17  ------------------------------------------------------------
+
+This is the first published version.
+We are conform to IB's TWS API 9.65. For more details consult the README section
+"Changes of original IB API".

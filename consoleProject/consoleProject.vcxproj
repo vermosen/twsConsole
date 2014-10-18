@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug test|Win32">
+      <Configuration>Debug test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{74267155-2065-45E3-A3AA-3FC28A940193}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>consoleProject</RootNamespace>
+    <ProjectName>consoleProject</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath);$(BOOST);$(PYTHON)\include\;$(GITHUB)\twsManager\PosixSocketClient\src\;$(GITHUB)\twsManager\shared\;$(GITHUB)\thOth\thOth\;$(GITHUB)/quantlib/objecthandler/;$(MYSQL)MySQL Server 5.7\include\;$(MYSQL)Connector C++ 1.1.3\include\;.</IncludePath>
+    <LibraryPath>$(LibraryPath);$(BOOST)\stage\lib;$(PYTHON)\libs\;$(GITHUB)\twsManager\Lib\;$(GITHUB)\thOth\thOth\lib\;$(GITHUB)\quantlib\objecthandler\lib\;C:\mysql\libmysql\Debug\;C:\mysql_connector\driver\Debug\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath);$(BOOST);$(PYTHON)\include\;$(GITHUB)\twsManager\PosixSocketClient\src\;$(GITHUB)\twsManager\shared\;$(GITHUB)\thOth\thOth\;$(GITHUB)/quantlib/objecthandler/;$(MYSQL)MySQL Server 5.7\include\;$(MYSQL)Connector C++ 1.1.3\include\;.</IncludePath>
+    <LibraryPath>$(LibraryPath);$(BOOST)\stage\lib;$(PYTHON)\libs\;$(GITHUB)\twsManager\Lib\;$(GITHUB)\thOth\thOth\lib\;$(GITHUB)\quantlib\objecthandler\lib\;C:\mysql\libmysql\Debug\;C:\mysql_connector\driver\Debug\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath);$(BOOST);$(PYTHON)\include\;$(GITHUB)\twsManager\PosixSocketClient\src\;$(GITHUB)\twsManager\shared\;$(GITHUB)\thOth\thOth\;$(GITHUB)/quantlib/objecthandler/;$(MYSQL)MySQL Server 5.7\include\;$(MYSQL)Connector C++ 1.1.3\include\;.</IncludePath>
+    <LibraryPath>$(LibraryPath);$(BOOST)\stage\lib;$(PYTHON)\libs\;$(GITHUB)\twsManager\Lib\;$(GITHUB)\thOth\thOth\lib\;$(GITHUB)\quantlib\objecthandler\lib\;C:\mysql\libmysql\Release\;C:\mysql_connector\driver\Release\</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>IB_USE_STD_STRING;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4800;4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>mysqlcppconn-static.lib;mysqlclient.lib;ObjectHandler-vc120-mt-sgd-1_2_0.lib;thOth-vc120-mt-sgd.lib;twsapi-vc120-mt-sgd.lib;Ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>IB_USE_STD_STRING;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4800;4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>mysqlcppconn-static.lib;mysqlclient.lib;ObjectHandler-vc120-mt-sgd-1_2_0.lib;thOth-vc120-mt-sgd.lib;twsapi-vc120-mt-sgd.lib;Ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>IB_USE_STD_STRING;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4800;4005</DisableSpecificWarnings>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>mysqlcppconn-static.lib;mysqlclient.lib;ObjectHandler-vc120-mt-sg-1_2_0.lib;thOth-vc120-mt-sg.lib;twsapi-vc120-mt-s.lib;Ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="functions\bulkImport\bulkImport.cpp" />
+    <ClCompile Include="functions\bulkStaticDataRequest\bulkStaticDataRequest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="functions\debug\debug.cpp" />
+    <ClCompile Include="functions\historicalRequest\historicalRequest.cpp" />
+    <ClCompile Include="functions\multiThreadedCsvBuilder\multiThreadedCsvBuilder.cpp" />
+    <ClCompile Include="functions\multiThreadedSetting\multiThreadedSetting.cpp" />
+    <ClCompile Include="functions\historyFileCreation\historyFileCreation.cpp" />
+    <ClCompile Include="functions\simpleStrategy\simpleStrategy.cpp" />
+    <ClCompile Include="functions\staticDataRequest2\staticDataRequest2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="functions\staticDataRequest\staticDataRequest.cpp" />
+    <ClCompile Include="recordset\functions\bulkInstrumentSelect\bulkInstrumentSelect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="recordset\functions\singleHistoricalBarSelect\singleHistoricalBarSelect.cpp" />
+    <ClCompile Include="recordset\functions\singleInstrumentSelect\singleInstrumentSelect.cpp" />
+    <ClCompile Include="recordset\tableContractRecordset2\tableContractRecordset2.cpp" />
+    <ClCompile Include="recordset\tableHistoricalBarRecordset2\tableHistoricalBarRecordset2.cpp" />
+    <ClCompile Include="request\historicalRequestClient\historicalRequestClient.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="recordset\tableContractRecordset\tableContractRecordset.cpp" />
+    <ClCompile Include="recordset\tableHistoricalBarRecordset\tableHistoricalBarRecordset.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="request\request.cpp" />
+    <ClCompile Include="request\staticDataRequestClient\staticDataRequestClient.cpp" />
+    <ClCompile Include="utilities\conversion\convertDateTime\convertDateTime.cpp" />
+    <ClCompile Include="utilities\factory\barSizeFactory\barSizeFactory.cpp" />
+    <ClCompile Include="utilities\factory\dataDurationFactory\dataDurationFactory.cpp" />
+    <ClCompile Include="utilities\factory\dataTypeFactory\dataTypeFactory.cpp" />
+    <ClCompile Include="recordset\functions\singleHistoricalBarInsert\singleHistoricalBarInsert.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="utilities\functions\validateContractWithDialog\validateContractWithDialog.cpp" />
+    <ClCompile Include="utilities\functions\convertDateWithDialog\convertDateWithDialog.cpp" />
+    <ClCompile Include="utilities\idGenerator\idGenerator.cpp" />
+    <ClCompile Include="utilities\logger\logger.cpp" />
+    <ClCompile Include="utilities\settings\settings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="functions\all.hpp" />
+    <ClInclude Include="functions\bulkImport\bulkImport.hpp" />
+    <ClInclude Include="functions\bulkStaticDataRequest\bulkStaticDataRequest.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="functions\debug\debug.hpp" />
+    <ClInclude Include="functions\multiThreadedCsvBuilder\multiThreadedCsvBuilder.hpp" />
+    <ClInclude Include="functions\multiThreadedSetting\multiThreadedSetting.hpp" />
+    <ClInclude Include="functions\historyFileCreation\historyFileCreation.hpp" />
+    <ClInclude Include="functions\simpleStrategy\simpleStrategy.hpp" />
+    <ClInclude Include="functions\staticDataRequest2\staticDataRequest2.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="recordset\functions\bulkInstrumentSelect\bulkInstrumentSelect.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="recordset\functions\singleHistoricalBarSelect\singleHistoricalBarSelect.hpp" />
+    <ClInclude Include="recordset\functions\singleInstrumentSelect\singleInstrumentSelect.hpp" />
+    <ClInclude Include="recordset\recordset.hpp" />
+    <ClInclude Include="recordset\recordset2.hpp" />
+    <ClInclude Include="recordset\recordsetException\recordsetException.hpp" />
+    <ClInclude Include="recordset\tableContractRecordset2\tableContractRecordset2.hpp" />
+    <ClInclude Include="recordset\tableContractRecordset\tableContractRecordset.hpp" />
+    <ClInclude Include="recordset\tableHistoricalBarRecordset\tableHistoricalBarRecordset.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="recordset\tableHistoricalBarRecordset2\tableHistoricalBarRecordset2.hpp" />
+    <ClInclude Include="request\request.hpp" />
+    <ClInclude Include="request\requestException\requestException.hpp" />
+    <ClInclude Include="utilities\conversion\convertDateTime\convertDateTime.hpp" />
+    <ClInclude Include="utilities\define.hpp" />
+    <ClInclude Include="functions\historicalRequest\historicalRequest.hpp" />
+    <ClInclude Include="functions\staticDataRequest\staticDataRequest.hpp" />
+    <ClInclude Include="request\historicalRequestClient\historicalRequestClient.hpp" />
+    <ClInclude Include="request\staticDataRequestClient\staticDataRequestClient.hpp" />
+    <ClInclude Include="utilities\factory\barSizeFactory\barSizeFactory.hpp" />
+    <ClInclude Include="utilities\factory\barSizeFactory\register_barSize.hpp" />
+    <ClInclude Include="utilities\factory\dataDurationFactory\dataDurationFactory.hpp" />
+    <ClInclude Include="utilities\factory\dataDurationFactory\register_dataDuration.hpp" />
+    <ClInclude Include="utilities\factory\dataTypeFactory\dataTypeFactory.hpp" />
+    <ClInclude Include="utilities\factory\dataTypeFactory\register_dataType.hpp" />
+    <ClInclude Include="utilities\factory\all.hpp" />
+    <ClInclude Include="recordset\functions\singleHistoricalBarInsert\singleHistoricalBarInsert.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug test|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="utilities\functions\validateContractWithDialog\validateContractWithDialog.hpp" />
+    <ClInclude Include="utilities\functions\convertDateWithDialog\convertDateWithDialog.hpp" />
+    <ClInclude Include="utilities\idGenerator\idGenerator.hpp" />
+    <ClInclude Include="utilities\logger\logger.hpp" />
+    <ClInclude Include="utilities\settings\settings.hpp" />
+    <ClInclude Include="utilities\type\all.hpp" />
+    <ClInclude Include="utilities\type\barSize.hpp" />
+    <ClInclude Include="utilities\type\dataDuration.hpp" />
+    <ClInclude Include="utilities\type\dataType.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
